@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元界雲林伺服器機房停機公告 - 元界創想伺服器技術組</title>
+    <style>
+        :root {
+            --gov-blue: #003366;
+            --gov-red: #cc0000;
+            --info-blue: #0056b3;
+            --warning-orange: #ff6600;
+            --bg-gray: #f0f2f5;
+        }
+        
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .document-wrapper {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border: 2px solid #ccc;
+            padding: 5% 8%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 標題自動適配 */
+        .org-header {
+            border-bottom: 3px solid var(--gov-red);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .org-name {
+            color: var(--gov-red);
+            font-size: clamp(20px, 5vw, 34px);
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .doc-type {
+            font-size: clamp(18px, 4vw, 28px);
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0 25px;
+            letter-spacing: 10px;
+            color: #000;
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #444;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .doc-meta { flex-direction: row; justify-content: space-between; }
+        }
+
+        .main-content {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #000;
+        }
+
+        /* 重點顏色 */
+        .highlight-red { color: var(--gov-red); font-weight: bold; }
+        .highlight-blue { color: var(--info-blue); font-weight: bold; }
+        .highlight-orange { color: var(--warning-orange); font-weight: bold; }
+
+        /* 表格自動適配：手機端改為區塊顯示 */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .info-table th, .info-table td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .info-table th {
+            background-color: #f5f5f5;
+            color: var(--gov-blue);
+            width: 100%;
+            display: block;
+        }
+
+        .info-table td {
+            width: 100%;
+            display: block;
+        }
+
+        @media (min-width: 600px) {
+            .info-table th { width: 20%; display: table-cell; text-align: center; }
+            .info-table td { width: 80%; display: table-cell; }
+        }
+
+        .hw-desc {
+            font-size: 13px;
+            color: #666;
+            font-family: Consolas, monospace;
+            background: #f8f9fa;
+            padding: 1px 4px;
+            border: 1px solid #ddd;
+        }
+
+        /* 法律聲明區塊 */
+        .legal-footer {
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 3px double #333;
+            font-size: 13px;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        .legal-item { margin-bottom: 15px; }
+        .legal-sub-item { padding-left: 1em; margin-top: 5px; text-align: justify; }
+
+        /* 頁尾簽章 */
+        .footer-sign {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 600px) {
+            .footer-sign { justify-content: flex-end; }
+        }
+
+        .seal-box {
+            border: 4px solid var(--gov-red);
+            color: var(--gov-red);
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 15px;
+            line-height: 1.3;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="document-wrapper">
+    <div class="org-header">
+        <div class="org-name">元界創想非營利組織</div>
+    </div>
+    
+    <div class="doc-type">【 停 機 公 告 】</div>
+
+    <div class="doc-meta">
+        <div>發文日期：<span class="highlight-blue">中華民國 115 年 1 月 30 日</span></div>
+        <div>發文字號：元創技字第 1150130-M01 號</div>
+    </div>
+
+    <div class="main-content">
+        <b>⚠️ 主旨：</b>
+        辦理本組織<span class="highlight-red">「雲林伺服器機房」</span>實體搬遷與硬體架構升級作業，自本（30）日 <span class="highlight-orange">10:00</span> 起暫停所有資訊託管服務。
+
+        <table class="info-table">
+            <tr>
+                <th>作業時段</th>
+                <td><span class="highlight-orange">⚠️ 115 年 1 月 30 日 10:00 至 17:00</span></td>
+            </tr>
+            <tr>
+                <th>服務項目</th>
+                <td>
+                    • <span class="highlight-blue">GO服 [Linux]</span> <span class="hw-desc">i7-4770</span><br>
+                    • <span class="highlight-blue">PRO服 [Win11]</span> <span class="hw-desc">i7-14700</span><br>
+                    • <span class="highlight-blue">Android服 [ATV 14]</span> <span class="hw-desc">MT8696</span><br>
+                    • <span class="highlight-orange">Minecraft 遊戲伺服器群</span><br>
+                    • <span class="highlight-orange">Discord 機器人核心服務</span>
+                </td>
+            </tr>
+            <tr>
+                <th>執行組別</th>
+                <td><b>元界創想 伺服器技術組</b></td>
+            </tr>
+        </table>
+        <p>⚠️ <span class="highlight-red">重要提醒：</span> 搬遷期間機房主機全數斷電，嚴禁強行嘗試連線，以確保資料庫安全。</p>
+    </div>
+
+    <div class="legal-footer">
+        <div class="legal-item">
+            <b>一、⚠️ 偽造、變造本技術組網頁、竄改系統監控數據或發布不實維護訊息者，涉嫌觸犯以下刑責，本組織將依法追究：</b>
+            <div class="legal-sub-item">
+                （一）<span class="highlight-red">刑法第211條：</span> 偽造、變造公文書，足以生損害於公眾或他人者，處一年以上七年以下有期徒刑。<br>
+                （二）<span class="highlight-red">刑法第360條：</span> 無故以電腦程式干擾他人電腦設備，致生損害於公眾或他人者，最高處三年有期徒刑。
+            </div>
+        </div>
+
+        <div class="legal-item">
+            <b>二、⚠️ 雲林機房執行計畫性停機或緊急維護時，應由技術組於下列時間前發布：</b>
+            <div class="legal-sub-item">
+                （一）<span class="highlight-blue">計畫性維護：</span> 應於維護日前 24 小時完成發布。若遇電力、冷卻失效等硬體故障，應於 15 分鐘內發布緊急通告。<br>
+                （二）<span class="highlight-blue">臨時調整/資安修補：</span> 得視系統受威脅程度或硬體急迫性，隨時發布緊急停機指令。
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-sign">
+        <div style="text-align: center;">
+            <div class="seal-box">元界創想<br>伺服器技術組</div>
+            <div style="font-weight: bold; margin-top: 10px; font-size: 14px;">中華民國 115 年 1 月 30 日</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
