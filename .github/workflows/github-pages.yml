@@ -14,7 +14,7 @@ on:
 jobs:
   # 部署任務
   deploy:
-    runs-on: ubuntu-latest  # 使用 Ubuntu 環境執行
+    runs-on: ubuntu-latest  # 使用  Ubuntu 環境執行
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
